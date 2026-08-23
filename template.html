@@ -1,0 +1,575 @@
+<meta charset="utf-8">
+<title>Illinois' Tornado Year — 2026</title>
+<style>
+:root{
+  --paper:#FBFAF7; --paper-2:#F3F1EA; --ink:#1B1C1F; --ink-2:#4A4C52;
+  --muted:#7B7C82; --rule:#DCD9D0; --blue:#31628F; --terra:#B25A32;
+  --shadow:0 1px 2px rgba(27,28,31,.05),0 10px 30px -14px rgba(27,28,31,.20);
+  --serif:"Iowan Old Style",Charter,"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#14161A; --paper-2:#1A1D22; --ink:#ECEAE4; --ink-2:#B9B7B1;
+  --muted:#8B8C92; --rule:#2E3238; --blue:#6FA3D8; --terra:#D97E5A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --paper:#14161A; --paper-2:#1A1D22; --ink:#ECEAE4; --ink-2:#B9B7B1;
+  --muted:#8B8C92; --rule:#2E3238; --blue:#6FA3D8; --terra:#D97E5A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
+}
+:root[data-theme="light"]{
+  --paper:#FBFAF7; --paper-2:#F3F1EA; --ink:#1B1C1F; --ink-2:#4A4C52;
+  --muted:#7B7C82; --rule:#DCD9D0; --blue:#31628F; --terra:#B25A32;
+  --shadow:0 1px 2px rgba(27,28,31,.05),0 10px 30px -14px rgba(27,28,31,.20);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+     -webkit-font-smoothing:antialiased;line-height:1.62}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.17em;
+         text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:400}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ── hero ─────────────────────────────────────────────────────────── */
+.hero{padding:74px 0 36px}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.3rem);line-height:1.03;letter-spacing:-.02em;margin:.3em 0 .32em}
+.hero .lede{font-size:clamp(1.04rem,1.6vw,1.26rem);color:var(--ink-2);max-width:62ch}
+.hero .lede b{color:var(--ink);font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:1px;
+      background:var(--rule);border:1px solid var(--rule);margin-top:40px}
+.kpi{background:var(--paper);padding:17px 19px}
+.kpi .v{font-size:2.45rem;line-height:1;letter-spacing:-.022em;font-variant-numeric:tabular-nums}
+.kpi .k{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.11em;
+        text-transform:uppercase;color:var(--muted);margin-top:9px}
+.kpi .s{font-family:var(--sans);font-size:11.5px;color:var(--ink-2);margin-top:4px}
+.kpi.hot .v{color:var(--terra)}
+
+/* ── the plate: a printed sheet, identical in either theme ────────── */
+.plate{--p-paper:#FBFAF7; --p-ink:#1B1C1F; --p-ink2:#4A473F; --p-muted:#7A756B;
+       --p-rule:#DCD9D0; --p-water:#DEE7ED; --p-terra:#B25A32;
+       background:var(--p-paper);color:var(--p-ink);border:1px solid var(--rule);
+       box-shadow:var(--shadow);margin:0 0 46px}
+.plate .p-hd{padding:22px 28px 15px;border-bottom:1px solid var(--p-rule);
+             display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.plate .p-hd .eyebrow{color:var(--p-muted)}
+.plate .p-hd h3{font-family:var(--serif);font-size:1.62rem;letter-spacing:-.012em;
+                margin:.3em 0 .3em;color:var(--p-ink)}
+.plate .p-hd .scope{font-family:var(--sans);font-size:12px;color:var(--p-muted)}
+.plate .p-body{padding:20px 28px 6px}
+.plate .p-ft{padding:13px 28px 17px;border-top:1px solid var(--p-rule);font-family:var(--sans);
+             font-size:11px;color:var(--p-muted);line-height:1.78}
+.plate .p-ft b{color:var(--p-ink2);font-weight:600}
+.plate svg{display:block;width:100%;height:auto}
+.plate svg text{font-family:var(--sans)}
+.p-legend{display:flex;flex-wrap:wrap;gap:7px 20px;font-family:var(--sans);font-size:11.5px;
+          color:var(--p-ink2);padding:14px 28px 0;align-items:center}
+.p-legend i{width:22px;height:11px;display:inline-block;margin-right:7px;vertical-align:-1px;
+            border:1px solid rgba(0,0,0,.12)}
+.p-legend .ttl{font-weight:600;color:var(--p-ink);letter-spacing:.02em;
+               flex:0 0 100%;margin-bottom:-2px}
+
+.toggle{display:flex;border:1px solid var(--p-rule);flex:0 0 auto}
+.toggle button{font-family:var(--sans);font-size:12.5px;font-weight:600;background:#F1EFE8;
+  color:var(--p-ink2);border:0;padding:9px 17px;cursor:pointer;border-right:1px solid var(--p-rule)}
+.toggle button:last-child{border-right:0}
+.toggle button[aria-pressed="true"]{background:var(--p-terra);color:#fff}
+.toggle button:focus-visible,.play:focus-visible,input:focus-visible{outline:2px solid var(--p-terra);outline-offset:2px}
+
+/* ── replay controls ──────────────────────────────────────────────── */
+.replay-grid{display:grid;grid-template-columns:1fr 300px;gap:0}
+.replay-grid > div:last-child{border-left:1px solid var(--p-rule);padding:20px 26px}
+.readout{display:flex;align-items:baseline;gap:12px;font-family:var(--sans);padding:0 0 10px}
+.readout .d{font-size:24px;font-weight:600;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.readout .c{font-size:12.5px;color:var(--p-ink2);font-variant-numeric:tabular-nums}
+.controls{display:flex;align-items:center;gap:13px;padding:12px 0 4px;font-family:var(--sans)}
+.play{font-family:var(--sans);font-size:12.5px;font-weight:600;border:1px solid var(--p-rule);
+      background:#F1EFE8;color:var(--p-ink);padding:7px 14px;cursor:pointer;min-width:72px}
+.play:hover{border-color:var(--p-terra);color:var(--p-terra)}
+input[type=range]{flex:1;accent-color:var(--p-terra);cursor:pointer;min-width:70px}
+.track{display:block;width:100%;height:34px}
+
+/* ── prose ────────────────────────────────────────────────────────── */
+.say{padding:6px 0 42px;max-width:66ch}
+.say h2{font-size:1.85rem;letter-spacing:-.014em;margin:0 0 .45em}
+.say p{color:var(--ink-2);margin:0 0 1em}
+.say b{color:var(--ink);font-weight:600}
+table.cal{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:13px;margin:6px 0 4px}
+table.cal th,table.cal td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule)}
+table.cal th{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+table.cal td:last-child,table.cal th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+table.cal tr:last-child td{border-bottom:0}
+table.cal .em{color:var(--terra);font-weight:600}
+
+.plates{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:4px 0 30px}
+.sheet{background:#FBFAF7;border:1px solid var(--rule);box-shadow:var(--shadow)}
+.sheet img{display:block;width:100%;height:auto;border-bottom:1px solid #DCD9D0}
+.sheet figcaption{padding:13px 17px;font-family:var(--sans);font-size:11.5px;color:#4A473F;line-height:1.7}
+.sheet a{color:#31628F}
+.srcs{font-family:var(--sans);font-size:12.5px;color:var(--ink-2);line-height:1.85}
+.srcs li{margin-bottom:9px}
+footer{border-top:1px solid var(--rule);margin-top:36px;padding:24px 0 56px;
+       font-family:var(--sans);font-size:11.5px;color:var(--muted);line-height:1.8}
+.tip{position:fixed;pointer-events:none;z-index:60;background:#FBFAF7;border:1px solid #DCD9D0;
+     box-shadow:0 8px 26px -10px rgba(0,0,0,.35);padding:10px 12px;font-family:var(--sans);
+     font-size:12.5px;opacity:0;transition:opacity .12s;color:#1B1C1F}
+.tip .n{font-weight:600;font-size:13.5px;margin-bottom:5px}
+.tip .row{display:flex;justify-content:space-between;gap:20px;color:#4A473F;line-height:1.7}
+.tip .row b{color:#1B1C1F;font-variant-numeric:tabular-nums}
+.st{cursor:pointer}
+
+@media (max-width:900px){
+  .replay-grid{grid-template-columns:1fr}
+  .replay-grid > div:last-child{border-left:0;border-top:1px solid var(--p-rule)}
+  .plates{grid-template-columns:1fr}
+  .plate .p-body{padding:16px 18px 4px}
+  .plate .p-hd,.plate .p-ft,.p-legend{padding-left:18px;padding-right:18px}
+}
+@media (max-width:620px){.wrap{padding:0 18px}.hero{padding:46px 0 26px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">Iowa Environmental Mesonet · Storm Prediction Center · NCEI</div>
+  <h1>Illinois had a tornado year<br>unlike any on its record.</h1>
+  <p class="lede">Between 1 January and 13 August 2026 the National Weather Service logged
+  <b id="l-rep"></b> preliminary tornado reports in Illinois — <b id="l-x"></b> the state's own
+  average for those dates, and the highest count in the twenty-three years the reports have been
+  archived. Four plates on what that year looked like, and what the number actually means.</p>
+  <div class="kpis" id="kpis"></div>
+</header>
+
+<!-- ── Plate I ─────────────────────────────────────────────────────── -->
+<figure class="plate" id="plate1">
+  <div class="p-hd">
+    <div><div class="eyebrow">Plate I</div>
+      <h3>The season as it was reported</h3>
+      <div class="scope">Every Illinois tornado report at its recorded position · 1 Jan – 13 Aug 2026</div></div>
+  </div>
+  <div class="replay-grid">
+    <div class="p-body">
+      <svg id="ilmap" viewBox="0 0 660 470" role="img"
+           aria-label="Map of Illinois showing every 2026 tornado report at its recorded position"></svg>
+    </div>
+    <div>
+      <div class="readout"><span class="d" id="ro-date">1 January</span>
+        <span class="c"><b id="ro-count">0</b> reports</span></div>
+      <svg class="track" id="track" viewBox="0 0 300 34" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div class="controls">
+        <button class="play" id="play" type="button">Play</button>
+        <input type="range" id="scrub" min="1" max="225" value="225" aria-label="Day of year">
+      </div>
+      <p style="font-family:var(--sans);font-size:12px;color:var(--p-ink2);line-height:1.7;margin:22px 0 14px">
+        The season arrived in a handful of afternoons. <b id="l-bigday"></b> alone
+        produced <b id="l-bigcount"></b> reports.</p>
+      <div id="topdays"></div>
+    </div>
+  </div>
+  <figcaption class="p-ft" id="ft1"></figcaption>
+</figure>
+
+<!-- ── Plate II / III ──────────────────────────────────────────────── -->
+<figure class="plate" id="plate2">
+  <div class="p-hd">
+    <div><div class="eyebrow" id="nat-eyebrow">Plate II</div>
+      <h3 id="nat-h"></h3>
+      <div class="scope" id="nat-scope"></div></div>
+    <div class="toggle" role="group" aria-label="Measure">
+      <button type="button" data-mode="count" aria-pressed="true">Reports</button>
+      <button type="button" data-mode="ratio" aria-pressed="false">Against normal</button>
+    </div>
+  </div>
+  <div class="p-body">
+    <svg id="natmap" viewBox="0 0 980 563" role="img"
+         aria-label="Choropleth map of the contiguous United States"></svg>
+  </div>
+  <div class="p-legend" id="maplgd"></div>
+  <figcaption class="p-ft" id="ft2"></figcaption>
+</figure>
+
+<!-- ── Plate IV ────────────────────────────────────────────────────── -->
+<figure class="plate">
+  <div class="p-hd">
+    <div><div class="eyebrow">Plate IV</div>
+      <h3>Illinois tornadoes, every year since 1950</h3>
+      <div class="scope">Surveyed tornadoes · Storm Prediction Center severe database</div></div>
+  </div>
+  <div class="p-body"><svg id="c-il" viewBox="0 0 980 330"
+       aria-label="Illinois annual tornado counts 1950 to 2025 with the 2026 estimate"></svg></div>
+  <div class="p-legend">
+    <span><i style="background:#31628F"></i>surveyed tornadoes, 1950–2025</span>
+    <span><i style="background:#B07E22"></i>previous record year</span>
+    <span><i style="background:#E3A98D"></i>2026 estimate range — not yet surveyed</span>
+  </div>
+  <figcaption class="p-ft" id="ft-il"></figcaption>
+</figure>
+
+<!-- ── Plate V ─────────────────────────────────────────────────────── -->
+<figure class="plate">
+  <div class="p-hd">
+    <div><div class="eyebrow">Plate V</div>
+      <h3>The biggest single year each state has ever had</h3>
+      <div class="scope">Most tornadoes confirmed in one calendar year, 1950–2025 · top 16 states</div></div>
+  </div>
+  <div class="p-body"><svg id="c-rec" viewBox="0 0 980 430"
+       aria-label="All-time single-year tornado records by state"></svg></div>
+  <figcaption class="p-ft" id="ft-rec"></figcaption>
+</figure>
+
+<section class="say">
+  <h2>Reports are not tornadoes</h2>
+  <p>The 283 is a count of <i>reports</i>, and it should never be printed as a tornado count.
+  One tornado crossing four counties files four reports. Where 2026's damage surveys are already
+  complete, Illinois has <b>68 confirmed tornadoes against 143 reports</b> — a ratio of
+  <b id="v-ratio"></b>, <b id="v-rank"></b> of the fifteen states with enough reports to measure
+  one, and well below Illinois' own historical <b id="v-hist-ratio"></b>.</p>
+  <p>That leaves two defensible ways to translate 283 into tornadoes, and they disagree:</p>
+  <table class="cal">
+    <tr><th>Calibration</th><th>Ratio</th><th>Implied tornadoes</th></tr>
+    <tr><td>Illinois' pooled 2004–2025 history</td><td id="t-r1"></td><td id="t-v1"></td></tr>
+    <tr><td>Illinois' own completed 2026 surveys</td><td id="t-r2"></td><td id="t-v2"></td></tr>
+    <tr><td class="em">Illinois' all-time record, <span id="t-ry"></span></td><td>—</td>
+        <td class="em" id="t-rec"></td></tr>
+  </table>
+  <p>Both are shown rather than averaged. Either way the confirmed count lands at or above the
+  state record, with three and a half months of the season still to run. The disagreement is
+  itself the finding: Illinois' reports in 2026 are unusually duplicated, which is exactly why
+  the headline 283 overstates it.</p>
+</section>
+
+<section>
+  <div class="eyebrow" style="margin-bottom:13px">The printed sheets</div>
+  <div class="plates">
+    <figure class="sheet"><img src="plate_II_reports_2026.png" alt="Plate II, printed: preliminary tornado reports by state, 2026">
+      <figcaption><b>Plate II</b>, print edition · equal-area Albers, classes rising by magnitude
+      — <a href="plate_II_reports_2026.pdf">PDF</a></figcaption></figure>
+    <figure class="sheet"><img src="plate_III_vs_normal_2026.png" alt="Plate III, printed: 2026 reports against each state's 2004 to 2025 average">
+      <figcaption><b>Plate III</b>, print edition · diverging about a true midpoint of 1.0×
+      — <a href="plate_III_vs_normal_2026.pdf">PDF</a></figcaption></figure>
+  </div>
+</section>
+
+<section class="say" style="max-width:none">
+  <div class="eyebrow" style="margin-bottom:12px">Sources</div>
+  <ol class="srcs">
+    <li><b>Iowa Environmental Mesonet, Autoplot #163</b> — preliminary, unfiltered NWS Local Storm
+      Reports, type TORNADO, by state, 1 Jan – 13 Aug of each year 2004–2026. Retrieved
+      22 August 2026. Every report count and ×-normal figure. 2003 is unavailable from this endpoint.</li>
+    <li><b>IEM Local Storm Report archive</b> — 1,545 individual reports with timestamp and
+      coordinates, 2026. Plate I, the daily track, and the biggest-day figures.</li>
+    <li><b>NOAA SPC severe weather database</b>, 1950–2025 (73,458 surveyed tornado records).
+      Plates IV and V and all record figures. Counted per SPC's format specification — national
+      totals from <code>sg=1</code>, state totals from <code>sn=1</code>; the rule reproduces
+      SPC's published 1,817 national tornadoes for 2004 exactly.</li>
+    <li><b>NOAA NCEI Storm Events</b>, 2025 and 2026 detail files, compiled 19 August 2026.
+      2026's observed report-to-tornado ratio. Coverage ends 31 May 2026. Distinct tornadoes are
+      rows without a continuation flag, validated against SPC on 2025 at 0.97 nationally.</li>
+    <li><b>US Census Bureau</b> cartographic boundary file, states, 2023, 1:20,000,000,
+      reprojected to NAD83 / Conus Albers, EPSG:5070.</li>
+  </ol>
+</section>
+
+<footer>
+  <div><b>Method.</b> Every figure is derived by <code>analysis.py</code> from snapshotted sources
+  and read from <code>findings.json</code>; none is typed by hand. Report counts and surveyed
+  tornado counts are never mixed in one series. Maps are equal-area; ratios are computed against
+  each state's own mean for the identical calendar window, and states averaging under five
+  reports a year are masked, because a ratio on that base rate is noise.</div>
+  <div style="margin-top:11px">John Kenny · 22 August 2026 · preliminary storm reports are revised
+  as damage surveys complete.</div>
+</footer>
+</div>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script id="payload" type="application/json">__DATA__</script>
+<script>
+const D=JSON.parse(document.getElementById('payload').textContent);
+const F=D.findings,S=F.states,GEO=D.geo,IL=F.illinois,CEN=D.centroids,CALL=new Set(D.callout_states);
+const $=s=>document.querySelector(s),fmt=n=>n.toLocaleString('en-US');
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const INK='#1B1C1F',INK2='#4A473F',MUTED='#7A756B',RULE='#DCD9D0',
+      WATER='#DEE7ED',TERRA='#B25A32',NULLC='#E6E3DC';
+
+/* ── hero ─────────────────────────────────────────────────────────── */
+$('#l-rep').textContent=fmt(IL.lsr_2026);
+$('#l-x').textContent=IL.x_normal.toFixed(1)+' times';
+[['#v-ratio',IL.ratio_2026],['#v-hist-ratio',F.calibration.illinois.pooled],
+ ['#t-r1',F.calibration.illinois.pooled],['#t-v1',IL.est_from_history],
+ ['#t-r2',IL.ratio_2026],['#t-v2',IL.est_from_2026_ratio],
+ ['#t-ry',IL.record_year],['#t-rec',IL.record_count]].forEach(([k,v])=>$(k).textContent=v);
+const ORD={1:'the lowest',2:'second-lowest',3:'third-lowest',4:'fourth-lowest',5:'fifth-lowest'};
+$('#v-rank').textContent=ORD[IL.ratio_rank_low]||IL.ratio_rank_low+'th-lowest';
+$('#kpis').innerHTML=[
+ {v:fmt(IL.lsr_2026),k:'Illinois reports',s:'1 Jan – 13 Aug 2026',hot:1},
+ {v:IL.x_normal.toFixed(1)+'×',k:'its own average',s:'against 2004–2025',hot:1},
+ {v:'1st',k:'of '+IL.n_years+' years',s:'highest on the record'},
+ {v:fmt(IL.lsr_max_prior),k:'previous high',s:'set in '+IL.lsr_max_prior_year},
+ {v:fmt(IL.record_count),k:'state record',s:IL.record_year+' · surveyed'},
+].map(d=>`<div class="kpi${d.hot?' hot':''}"><div class="v tnum">${d.v}</div>
+  <div class="k">${d.k}</div><div class="s">${d.s}</div></div>`).join('');
+const DT=s=>{const [,m,d]=s.split('-').map(Number);
+  return d+' '+['January','February','March','April','May','June','July','August'][m-1];};
+$('#l-bigday').textContent=DT(IL.top_days[0].date);
+$('#l-bigcount').textContent=IL.top_days[0].n;
+const bmax=IL.top_days[0].n;
+$('#topdays').innerHTML='<div class="eyebrow" style="color:'+MUTED+';margin-bottom:8px">Biggest days</div>'+
+ IL.top_days.slice(0,5).map(d=>`<div style="display:flex;align-items:center;gap:10px;
+   font-family:var(--sans);font-size:12px;margin-bottom:5px;color:${INK2}">
+   <span style="width:66px">${DT(d.date)}</span>
+   <span style="flex:1;height:8px;background:#EDEAE3;position:relative">
+     <span style="position:absolute;left:0;top:0;bottom:0;width:${100*d.n/bmax}%;background:${TERRA}"></span></span>
+   <b class="tnum" style="width:22px;text-align:right;color:${INK}">${d.n}</b></div>`).join('');
+
+/* ── shared plate map machinery (mirrors plates.py) ───────────────── */
+const X0=-2460,X1=3060,Y0=140,Y1=3310,NW=980;
+const K=NW/(X1-X0), NH=Math.round((Y1-Y0)*K);
+const px=x=>(x-X0)*K, py=y=>NH-(y-Y0)*K;
+const pathOf=r=>'M'+r.map(([x,y])=>px(x).toFixed(1)+' '+py(y).toFixed(1)).join('L')+'Z';
+const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const T=(x,y,t,a='middle',s=13,c=MUTED,w=400)=>
+  `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${a}" font-size="${s}"
+   font-weight="${w}" fill="${c}">${esc(t)}</text>`;
+function northArrow(){
+  const x=px(-2300),y=py(2760);
+  return `<line x1="${x}" y1="${y}" x2="${x}" y2="${y-38}" stroke="${INK}" stroke-width="1.6"/>
+   <path d="M${x-7} ${y-33}L${x} ${y-49}L${x+7} ${y-33}Z" fill="${INK}"/>`+
+   T(x,y+15,'N','middle',13,INK,600);
+}
+function callouts(rows){
+  rows=rows.slice().sort((a,b)=>CEN[b.ab][1]-CEN[a.ab][1]);
+  const x0=px(2380),w=px(2940)-px(2380),h=18,y0=py(2560),dy=26.5;
+  return rows.map((r,i)=>{const by=y0+i*dy,[cx,cy]=CEN[r.ab];
+    return `<line x1="${px(cx).toFixed(1)}" y1="${py(cy).toFixed(1)}" x2="${(x0-4).toFixed(1)}"
+      y2="${by.toFixed(1)}" stroke="#9A948A" stroke-width=".6"/>
+     <circle cx="${px(cx).toFixed(1)}" cy="${py(cy).toFixed(1)}" r="1.5" fill="#9A948A"/>
+     <rect x="${x0.toFixed(1)}" y="${(by-h/2).toFixed(1)}" width="${w.toFixed(1)}" height="${h}"
+      fill="${r.fill}" stroke="#FFF" stroke-width=".7"/>`+
+     T(x0+w/2,by+4,r.ab+'   '+r.label,'middle',11.5,r.txt,600);}).join('');
+}
+const klass=(v,b)=>{for(let i=0;i<b.length;i++) if(v<b[i]) return i; return b.length;};
+
+/* the two printed measures, breaks and ramps identical to plates.py */
+const MODE={
+ count:{plate:'Plate II',h:'Preliminary tornado reports by state',
+   scope:'National Weather Service Local Storm Reports · 1 January – 13 August 2026',
+   breaks:[1,10,25,50,100,200],
+   ramp:['#FFFFFF','#E3ECF4','#B9CFE4','#82A7C9','#4A7AA6','#24537E','#122F4B'],
+   txt:[MUTED,INK2,INK2,INK,'#FFF','#FFF','#FFF'],
+   labels:['none','1 – 9','10 – 24','25 – 49','50 – 99','100 – 199','200 or more'],
+   ltitle:'Reports · classes rising by magnitude',
+   val:ab=>S[ab]?.lsr_2026||0, fmtv:v=>v?String(v):'–',
+   ft:`<b>Data</b> Iowa Environmental Mesonet, Autoplot #163, preliminary and unfiltered Local
+    Storm Reports, type TORNADO. Retrieved 22 August 2026. <b>Projection</b> NAD83 / Conus Albers
+    (EPSG:5070), equal area. <b>Note</b> Figures are counts of reports, not of tornadoes; a single
+    tornado crossing four counties files four reports. Reports are preliminary and are revised as
+    damage surveys complete.`},
+ ratio:{plate:'Plate III',h:'A displaced tornado season',
+   scope:'2026 reports against the same state’s 2004–2025 average for the identical window',
+   breaks:[.5,.8,1.25,2,3],
+   ramp:['#2B5580','#8CADC9','#EFEDE8','#E3A98D','#B25A32','#8A3517'],
+   txt:['#FFF',INK,INK2,INK,'#FFF','#FFF'],
+   labels:['below 0.5×','0.5 – 0.8×','0.8 – 1.25×  near normal','1.25 – 2.0×','2.0 – 3.0×','3.0× or more'],
+   ltitle:'2026 against its own average', masked:true,
+   val:ab=>S[ab]?.x_normal, fmtv:v=>v.toFixed(1)+'×',
+   ft:`<b>Data</b> Iowa Environmental Mesonet, Autoplot #163, preliminary Local Storm Reports,
+    type TORNADO, 2004–2026. Retrieved 22 August 2026. <b>Projection</b> NAD83 / Conus Albers
+    (EPSG:5070), equal area. <b>Method</b> Each state is set against its own 2004–2025 mean for the
+    identical calendar window, so the map shows anomaly rather than exposure. Classes are fixed
+    multiples about a true midpoint of 1.0×; states averaging under five reports a year are masked,
+    because a ratio on that base rate is noise.`}};
+
+function drawNat(m){
+  const M=MODE[m], out=[], rows=[];
+  out.push(`<rect width="${NW}" height="${NH}" fill="${WATER}"/>`);
+  out.push('<defs><pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#C9C4B8" stroke-width="2.4"/></pattern></defs>');
+  for(const ab in GEO){
+    const d=S[ab], mask=M.masked&&(!d||d.lsr_mean<5);
+    const v=mask?null:M.val(ab)??0;
+    const i=mask?-1:klass(v,M.breaks);
+    const fill=mask?NULLC:M.ramp[i], txt=mask?INK2:M.txt[i];
+    const label=mask?'n/a':M.fmtv(v);
+    out.push(GEO[ab].r.map(r=>`<path class="st" data-ab="${ab}" tabindex="0" role="img"
+      aria-label="${esc(GEO[ab].n)}: ${esc(label)}" d="${pathOf(r)}" fill="${fill}"
+      stroke="#FFF" stroke-width=".9"/>`).join(''));
+    if(mask) out.push(GEO[ab].r.map(r=>`<path d="${pathOf(r)}" fill="url(#hatch)"
+      stroke="none" pointer-events="none"/>`).join(''));
+    if(CALL.has(ab)) rows.push({ab,label,fill,txt});
+    else { const [cx,cy]=CEN[ab];
+      out.push(`<g pointer-events="none">`+T(px(cx),py(cy)+4,label,'middle',13,txt,600)+`</g>`); }
+  }
+  out.push(`<g pointer-events="none">${callouts(rows)}${northArrow()}</g>`);
+  $('#natmap').innerHTML=out.join('');
+  $('#nat-eyebrow').textContent=M.plate;
+  $('#nat-h').textContent=M.h;
+  $('#nat-scope').textContent=M.scope;
+  $('#ft2').innerHTML=M.ft;
+  $('#maplgd').innerHTML=`<span class="ttl">${M.ltitle}</span>`+
+    M.labels.map((l,i)=>`<span><i style="background:${M.ramp[i]}"></i>${l}</span>`).join('')+
+    (M.masked?`<span><i style="background:${NULLC};background-image:repeating-linear-gradient(45deg,#C9C4B8 0 2px,transparent 2px 5px)"></i>base rate too low</span>`:'');
+  document.querySelectorAll('.toggle button').forEach(b=>
+    b.setAttribute('aria-pressed', String(b.dataset.mode===m)));
+}
+drawNat('count');
+document.querySelectorAll('.toggle button').forEach(b=>
+  b.addEventListener('click',()=>drawNat(b.dataset.mode)));
+
+/* tooltip */
+const tip=$('#tip');
+function showTip(ab,x,y){
+  const d=S[ab]; if(!d){tip.style.opacity=0;return}
+  tip.innerHTML=`<div class="n">${esc(GEO[ab].n)}</div>
+   <div class="row"><span>2026 reports</span><b>${fmt(d.lsr_2026)}</b></div>
+   <div class="row"><span>its 2004–25 average</span><b>${d.lsr_mean.toFixed(1)}</b></div>
+   <div class="row"><span>against normal</span><b>${d.lsr_mean>=5?d.x_normal.toFixed(2)+'×':'—'}</b></div>
+   <div class="row"><span>rank this year</span><b>${d.rank_2026===1?'highest on record':'#'+d.rank_2026+' of '+d.n_years}</b></div>
+   <div class="row"><span>all-time record</span><b>${d.record_count} in ${d.record_year}</b></div>`;
+  tip.style.opacity=1;
+  tip.style.left=Math.min(x+16,innerWidth-tip.offsetWidth-12)+'px';
+  tip.style.top=Math.max(10,Math.min(y+16,innerHeight-tip.offsetHeight-12))+'px';
+}
+const nmap=$('#natmap');
+nmap.addEventListener('mousemove',e=>{const t=e.target.closest('.st');
+  t?showTip(t.dataset.ab,e.clientX,e.clientY):(tip.style.opacity=0)});
+nmap.addEventListener('mouseleave',()=>tip.style.opacity=0);
+nmap.addEventListener('focusin',e=>{const t=e.target.closest('.st'); if(!t)return;
+  const r=t.getBoundingClientRect(); showTip(t.dataset.ab,r.left+r.width/2,r.top)});
+nmap.addEventListener('focusout',()=>tip.style.opacity=0);
+
+/* ── Plate I: Illinois ────────────────────────────────────────────── */
+const IW=660,IH=470;
+(function(){
+  const near=['IA','MO','IN','KY','WI'];
+  let x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;
+  GEO.IL.r.flat().forEach(([x,y])=>{x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y)});
+  const pad=95,w=x1-x0+pad*2,h=y1-y0+pad*2,k=Math.min(IW/w,IH/h);
+  const ix=x=>(x-x0+pad)*k+(IW-w*k)/2, iy=y=>IH-((y-y0+pad)*k+(IH-h*k)/2);
+  const pa=r=>'M'+r.map(([x,y])=>ix(x).toFixed(1)+' '+iy(y).toFixed(1)).join('L')+'Z';
+  let s=`<rect width="${IW}" height="${IH}" fill="${WATER}"/>`;
+  near.forEach(a=>{if(GEO[a]) s+=GEO[a].r.map(r=>
+    `<path d="${pa(r)}" fill="#EDEAE3" stroke="#FBFAF7" stroke-width="1"/>`).join('')});
+  near.forEach(a=>{if(!GEO[a])return;const [cx,cy]=CEN[a];
+    const X=ix(cx),Y=iy(cy); if(X>10&&X<IW-10&&Y>10&&Y<IH-10)
+      s+=T(X,Y,GEO[a].n.toUpperCase(),'middle',10,'#A9A296',600)});
+  s+=GEO.IL.r.map(r=>`<path d="${pa(r)}" fill="#F6F4EE" stroke="${INK2}" stroke-width="1.3"/>`).join('');
+  s+='<g id="pts">'+D.il_points.map(([x,y,d])=>
+     `<circle cx="${ix(x).toFixed(1)}" cy="${iy(y).toFixed(1)}" r="0" data-d="${d}"
+      fill="${TERRA}" fill-opacity=".55" stroke="${TERRA}" stroke-width=".6"/>`).join('')+'</g>';
+  s+=T(IW-10,IH-9,'EPSG:5070 · equal area','end',10,'#A9A296');
+  $('#ilmap').innerHTML=s;
+})();
+const CIR=[...document.querySelectorAll('#pts circle')];
+const MO=[0,31,59,90,120,151,181,212],MN=['January','February','March','April','May','June','July','August'];
+const dayLabel=d=>{let m=0;while(m<7&&d>MO[m+1])m++;return (d-MO[m])+' '+MN[m]};
+let day=225,playing=false;
+function render(d){
+  day=d; let n=0;
+  for(const c of CIR){const cd=+c.dataset.d;
+    if(cd<=d){n++;const age=d-cd;
+      c.setAttribute('r',age<3?5:(age<12?3.9:3.2));
+      c.setAttribute('fill-opacity',age<3?'.9':(age<26?'.6':'.38'));
+    } else c.setAttribute('r',0);}
+  $('#ro-date').textContent=dayLabel(d);
+  $('#ro-count').textContent=n;
+  $('#scrub').value=d;
+  $('#cursor')?.setAttribute('x',(d/225*300).toFixed(1));
+}
+(function(){
+  const d=D.il_daily,mx=Math.max(...d),W=300,H=34;
+  $('#track').innerHTML=`<rect width="${W}" height="${H}" fill="#F1EFE8"/>`+
+    d.map((v,i)=>v?`<rect x="${(i*W/d.length).toFixed(2)}" y="${(H-v/mx*H).toFixed(2)}"
+      width="${Math.max(1,W/d.length-.3).toFixed(2)}" height="${(v/mx*H).toFixed(2)}"
+      fill="${TERRA}" fill-opacity=".85"/>`:'').join('')+
+    `<rect id="cursor" x="300" y="0" width="1.4" height="${H}" fill="${INK}"/>`;
+})();
+$('#scrub').addEventListener('input',e=>{stop();render(+e.target.value)});
+function stop(){playing=false;$('#play').textContent='Play'}
+$('#play').addEventListener('click',()=>{
+  if(playing){stop();return}
+  if(day>=225) render(1);
+  playing=true; $('#play').textContent='Pause';});
+let last=0;
+requestAnimationFrame(function tick(t){
+  if(playing&&t-last>32){last=t; render(day+1);
+    if(day>=225){playing=false;$('#play').textContent='Replay'}}
+  requestAnimationFrame(tick);});
+render(225);
+if(!RM){                                     // play once, when it is actually on screen
+  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){
+    io.disconnect(); render(1); playing=true; $('#play').textContent='Pause';}},{threshold:.55});
+  io.observe($('#plate1'));
+}
+$('#ft1').innerHTML=`<b>Data</b> Iowa Environmental Mesonet Local Storm Report archive, type
+ TORNADO, retrieved 22 August 2026. <b>Projection</b> NAD83 / Conus Albers (EPSG:5070), equal area.
+ <b>Note</b> Each dot is one report at its recorded position, sized by recency as the season runs.
+ ${D.il_points_plotted} of the ${D.il_rows_raw} Illinois rows in the archive are plotted;
+ byte-identical duplicate filings are removed, as the IEM's own state aggregation does. That
+ aggregation, used elsewhere here, returns ${IL.lsr_2026}.`;
+
+/* ── Plate IV: Illinois since 1950 ────────────────────────────────── */
+(function(){
+  const yr=IL.actual_by_year,ys=Object.keys(yr).map(Number).sort((a,b)=>a-b);
+  const W=980,H=330,L=48,R=178,TT=22,B=40;
+  const hi=Math.max(IL.est_from_history,...ys.map(y=>yr[y]))*1.08;
+  const bw=(W-L-R)/(ys.length+1), X=i=>L+i*bw, Y=v=>H-B-(v/hi)*(H-TT-B);
+  let s='';
+  [0,50,100,150,200].filter(v=>v<hi).forEach(v=>{
+    s+=`<line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="${RULE}"/>`+T(L-8,Y(v)+4,v,'end',11);});
+  ys.forEach((y,i)=>{const v=yr[y],rec=y==IL.record_year;
+    s+=`<rect x="${X(i).toFixed(1)}" y="${Y(v).toFixed(1)}" width="${(bw-1).toFixed(1)}"
+      height="${(H-B-Y(v)).toFixed(1)}" fill="${rec?'#B07E22':'#31628F'}" fill-opacity="${rec?1:.85}">
+      <title>${y}: ${v} tornadoes</title></rect>`;});
+  s+=`<line x1="${L}" y1="${Y(IL.record_count)}" x2="${W-R}" y2="${Y(IL.record_count)}"
+     stroke="#B07E22" stroke-width="1.4" stroke-dasharray="5 4"/>`;
+  s+=T(L+8,Y(IL.record_count)-8,'previous record · '+IL.record_count+' in '+IL.record_year,'start',11.5,'#B07E22',600);
+  const ex=X(ys.length)+1,ew=bw*.85,yh=Y(IL.est_from_history),yl=Y(IL.est_from_2026_ratio);
+  s+=`<rect x="${ex.toFixed(1)}" y="${yh.toFixed(1)}" width="${ew.toFixed(1)}"
+     height="${(yl-yh).toFixed(1)}" fill="#E3A98D" fill-opacity=".5" stroke="${TERRA}"
+     stroke-width="1" stroke-dasharray="3 3"/>`;
+  const gap=Math.max(0,26-(yl-yh));
+  s+=`<line x1="${(ex+ew).toFixed(1)}" y1="${yh}" x2="${W-R+6}" y2="${(yh-gap/2).toFixed(1)}" stroke="${TERRA}" stroke-width=".8" stroke-opacity=".6"/>`;
+  s+=`<line x1="${(ex+ew).toFixed(1)}" y1="${yl}" x2="${W-R+6}" y2="${(yl+gap/2).toFixed(1)}" stroke="${TERRA}" stroke-width=".8" stroke-opacity=".6"/>`;
+  s+=T(W-R+10,yh+4-gap/2,IL.est_from_history+' — from history','start',11.5,TERRA,600);
+  s+=T(W-R+10,yl+4+gap/2,IL.est_from_2026_ratio+" — from 2026's own surveys",'start',11.5,TERRA,600);
+  s+=T(ex+ew/2,H-B+15,'2026','middle',11,TERRA,600);
+  [1950,1970,1990,2010].forEach(y=>{const i=ys.indexOf(y); if(i>=0) s+=T(X(i)+bw/2,H-B+15,y,'middle',11);});
+  s+=`<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="${INK2}"/>`;
+  $('#c-il').innerHTML=s;
+  $('#ft-il').innerHTML=`<b>Data</b> NOAA SPC severe weather database 1950–2025 (surveyed
+   tornadoes, state segments where sn=1), retrieved 22 August 2026. <b>Method</b> Bars are
+   confirmed tornadoes for the full calendar year. The 2026 marker is an estimate, not a count:
+   ${fmt(IL.lsr_2026)} preliminary reports scaled by Illinois' pooled 2004–2025 report-to-tornado
+   ratio of ${F.calibration.illinois.pooled} (upper bound) and by the ${IL.ratio_2026} ratio
+   actually observed in 2026's completed surveys (lower bound).`;
+})();
+
+/* ── Plate V: all-time records ────────────────────────────────────── */
+(function(){
+  const rows=Object.entries(S).map(([ab,v])=>({ab,r:v.record_count,y:v.record_year}))
+    .sort((a,b)=>b.r-a.r).slice(0,16);
+  const W=980,H=430,L=136,R=152,TT=38,B=34;
+  const bh=(H-TT-B)/rows.length,hi=Math.max(...rows.map(d=>d.r))*1.02,X=v=>L+(v/hi)*(W-L-R);
+  let s='';
+  [0,50,100,150,200].filter(v=>v<hi).forEach(v=>{
+    s+=`<line x1="${X(v)}" y1="${TT}" x2="${X(v)}" y2="${H-B}" stroke="${RULE}"/>`+T(X(v),H-B+16,v,'middle',11);});
+  rows.forEach((d,i)=>{const y=TT+i*bh,il=d.ab==='IL';
+    s+=`<rect x="${L}" y="${(y+3).toFixed(1)}" width="${(X(d.r)-L).toFixed(1)}"
+      height="${(bh-7).toFixed(1)}" fill="${il?TERRA:'#31628F'}" fill-opacity="${il?1:.72}">
+      <title>${GEO[d.ab]?.n}: ${d.r} in ${d.y}</title></rect>`;
+    s+=T(L-10,y+bh/2+4,GEO[d.ab]?.n||d.ab,'end',12,il?TERRA:INK2,il?700:400);
+    s+=T(X(d.r)+8,y+bh/2+4,d.r+' in '+d.y,'start',11.5,il?TERRA:MUTED,il?700:400);});
+  const ex=X(IL.est_from_2026_ratio);
+  s+=`<line x1="${ex.toFixed(1)}" y1="${TT-6}" x2="${ex.toFixed(1)}" y2="${H-B}"
+     stroke="${TERRA}" stroke-width="1.8" stroke-dasharray="5 4"/>`;
+  s+=T(ex,TT-14,'Illinois 2026, estimated · '+IL.est_from_2026_ratio,'middle',11.5,TERRA,700);
+  $('#c-rec').innerHTML=s;
+  $('#ft-rec').innerHTML=`<b>Data</b> NOAA SPC severe weather database, 1950–2025, retrieved
+   22 August 2026. <b>Method</b> Each bar is the single highest calendar-year count of surveyed
+   tornadoes that state has recorded since 1950, counted as state segments (sn=1) so a tornado
+   crossing a state line is credited to both. The dashed rule marks Illinois' lower-bound 2026
+   estimate of ${IL.est_from_2026_ratio}, which would already surpass its ${IL.record_year} record
+   of ${IL.record_count}. Detection has improved enormously since 1950; treat pre-1990 counts as a floor.`;
+})();
+</script>
